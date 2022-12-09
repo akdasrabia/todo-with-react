@@ -1,0 +1,91 @@
+
+
+.card {
+width: 30%;
+min-height: 687px;
+background: #FFFFFF;
+border: 1px solid rgba(255, 229, 229, 0.1);
+border-radius: 5px;
+display: flex;
+flex-direction: column;
+padding-right: auto;
+padding-left: 20px;
+}
+
+.header {
+    font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 64px;
+margin: 15px 0 0 0;
+color: #000000;
+}
+
+.box {
+    width: 90%;
+    height: 64px;
+    background: #FFFFFF;
+border: 2px solid #D97676;
+border-radius: 10px;
+margin-bottom: 15px;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+padding-left: 10px;
+padding-right: 10px;
+
+}
+
+button {
+    border: none;
+    background: #D97676;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 2px;
+width: 45px;
+    height: 24px;
+display: flex;
+align-items: center;
+font-style: normal;
+font-weight: 400;
+font-size: .8rem;
+line-height: 26px;
+
+color: #FFFFFF;
+}
+
+.input {
+    
+    border: none;
+    font-family: 'Shadows Into Light';
+    font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 51px;
+
+color: rgba(0, 0, 0, 0.5);
+}
+.input:focus {
+	outline: 0;
+}
+
+p {
+    font-family: 'Shadows Into Light';
+    font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 51px;
+
+color: #000
+}
+
+
+@media screen and (max-width: 968px) {
+    .card {
+        width: 80%;
+        margin-bottom: 30px;
+        min-height: 300px;
+    }
+    
+}
+

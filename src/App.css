@@ -1,0 +1,41 @@
+*{
+  box-sizing: border-box;
+}
+
+
+.App {
+  text-align: left;
+  min-height: 100vh;
+  max-width: 80%;
+
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+.App h2{
+  font-family: 'Shadows Into Light';
+font-style: normal;
+font-weight: 400;
+font-size: 64px;
+line-height: 103px;
+
+color: #000000;
+}
+
+
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
