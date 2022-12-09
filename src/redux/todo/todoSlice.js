@@ -68,7 +68,6 @@ export const todoSlice = createSlice({
     },
     reducers: {
         addTodo: (state, action) => {
-            console.log(action.payload)
             state.items.push(action.payload)
         },
         changeStatus: (state, action) => {
@@ -76,10 +75,15 @@ export const todoSlice = createSlice({
             const item = state.items.find(item => item.id == id)
             item.status = newStatus
         },
+        close: (state, action) => {
+            const {id} = action.payload
+            const filtered = state.items.filter((item) => item.id !== id)
+            state.items = filtered
+        },
     }
 })
 
 export const selectTodos = state => state.todos.items
 
-export const {addTodo, changeStatus} = todoSlice.actions
+export const {addTodo, changeStatus, close} = todoSlice.actions
 export default todoSlice.reducer

@@ -2,7 +2,7 @@ import {useState} from 'react'
 import styles from './styles.module.css'
 import { useDispatch } from 'react-redux'
 import { nanoid } from '@reduxjs/toolkit'
-import { addTodo, changeStatus } from '../../redux/todo/todoSlice'
+import { addTodo, changeStatus, close } from '../../redux/todo/todoSlice'
 
 function Card({ title, color, button, items }) {
   const dispatch = useDispatch()
@@ -17,8 +17,6 @@ function Card({ title, color, button, items }) {
   }
 
   const handleClick = (item) => {
-    console.log("handle click")
-    console.log(item)
     let newStatus;
     if (item.status == "todo"){
       newStatus = "doing"
@@ -27,8 +25,9 @@ function Card({ title, color, button, items }) {
     else if(item.status == "doing"){
       newStatus = "done"
       dispatch(changeStatus({ id: item.id, newStatus: newStatus }))
+    }else if(item.status == "done"){
+      dispatch(close({id: item.id}))
     }
-    
   }
 
 
@@ -46,7 +45,7 @@ function Card({ title, color, button, items }) {
       }
       {
         items.map((item) => (
-          <div className={styles.box}>
+          <div className={styles.box} key={item.id}>
             <p>{item.task}</p>
             <button style={{ background: color }} onClick={() => handleClick(item)}>{button}</button>
           </div>

@@ -12,16 +12,11 @@ let doing = [];
 let done = [];
 
 function Cards() {
-
-
   const items = useSelector(selectTodos)
-  console.log(items)
-
   todo = items.filter((item) => item.status == "todo")
   doing = items.filter((item) => item.status == "doing")
   done = items.filter((item) => item.status == "done")
 
-  console.log("todo", todo)
 
 
   return (
